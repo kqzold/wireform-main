@@ -1,0 +1,717 @@
+/* Общие стили */
+body {
+    font-family: 'Creepster', cursive; /* Шрифт по умолчанию для всего текста */
+    background-color: #f4f4f4; /* Светлый фон для всего тела страницы */
+    background-image: url(''); /* Здесь можно задать фоновое изображение, если оно нужно */
+    background-repeat: repeat; /* Повтор фона по всей странице */
+    color: #333; /* Цвет текста */
+    margin: 0; /* Убираем отступы вокруг страницы */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Trebuchet MS', sans-serif; /* Шрифт для заголовков */
+}
+
+/* Темная тема */
+body.dark-theme {
+    background-color: #121212; /* Темный фон для страницы */
+    color: #e4e4e4; /* Цвет текста в темной теме */
+}
+
+nav.dark-theme {
+    background-color: #333333 !important; /* Темный фон для навигационной панели */
+}
+
+footer.dark-theme {
+    background-color: #333333; /* Темный фон для футера */
+}
+
+.btn-toggle-theme {
+    position: fixed; /* Фиксированное положение кнопки переключения темы */
+    bottom: 20px; /* Отступ снизу */
+    right: 20px; /* Отступ справа */
+    z-index: 1000; /* Устанавливаем высокий уровень для кнопки, чтобы она не была скрыта */
+}
+
+/* Цвета заголовков в темной теме */
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3, 
+body.dark-theme h4 {
+    color: #f9d71c; /* Ярко-желтый цвет для заголовков в темной теме */
+}
+
+/* Стили для навигационной панели в темной теме */
+body.dark-theme .navbar {
+    background-color: #1c1c1c; /* Очень темный фон для навигационной панели */
+}
+body.dark-theme .navbar-brand {
+    color: #f9d71c; /* Ярко-желтый цвет для логотипа */
+}
+body.dark-theme .navbar-brand:hover {
+    color: #ffc107; /* Цвет при наведении на логотип */
+}
+body.dark-theme .nav-link {
+    color: #e4e4e4; /* Светлый цвет текста для ссылок */
+}
+body.dark-theme .nav-link:hover {
+    color: #f9d71c; /* Ярко-желтый цвет при наведении на ссылки */
+}
+
+/* Стили для заголовков и фона в хедере (верхняя часть страницы) */
+body.dark-theme header {
+    background-color: #222; /* Темный фон для хедера */
+    background-image: none; /* Убираем изображение фона в темной теме */
+    color: #e4e4e4; /* Цвет текста */
+    text-shadow: none; /* Убираем тени от текста */
+}
+
+/* Стили для видео-секции в темной теме */
+body.dark-theme .video-section {
+    background-color: #1c1c1c; /* Темный фон для секции с видео */
+    color: #e4e4e4; /* Цвет текста */
+}
+body.dark-theme .video-section h2 {
+    color: #f9d71c; /* Ярко-желтый цвет для заголовка в секции с видео */
+}
+
+/* Стили для секции с преимуществами */
+body.dark-theme .benefits {
+    background-color: #1c1c1c; /* Темный фон для секции с преимуществами */
+    border: 1px solid #444; /* Светлый бордер для отделения */
+}
+body.dark-theme .benefits .benefit-item {
+    background-color: #2a2a2a; /* Темный фон для элементов преимуществ */
+    color: #e4e4e4; /* Цвет текста */
+}
+body.dark-theme .benefits .benefit-item:hover {
+    transform: scale(1.05); /* Увеличение элемента при наведении */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); /* Тень вокруг элемента */
+}
+
+/* Стили для раздела с отзывами */
+body.dark-theme #testimonials {
+    background-color: #1c1c1c; /* Темный фон для секции с отзывами */
+    color: #e4e4e4; /* Цвет текста */
+    border-color: #444; /* Светлый бордер */
+}
+
+/* Стили для раздела с персонажами */
+body.dark-theme #characters {
+    background-color: #1c1c1c; /* Темный фон для раздела с персонажами */
+}
+body.dark-theme #characters img {
+    border: 3px solid #444; /* Бордер для изображений персонажей */
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.1); /* Тень вокруг изображений */
+}
+body.dark-theme #characters .character-item {
+    background-color: #2a2a2a; /* Темный фон для элементов персонажей */
+    border-color: #444; /* Светлый бордер */
+    color: #e4e4e4; /* Цвет текста */
+}
+body.dark-theme #characters .character-item:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); /* Увеличенная тень при наведении */
+}
+
+/* Стили для формы с email в темной теме */
+body.dark-theme form input[type="email"] {
+    background-color: #2a2a2a; /* Темный фон для поля ввода email */
+    color: #e4e4e4; /* Цвет текста */
+    border: 2px solid #444; /* Бордер для поля ввода */
+}
+
+/* Стили для кнопки отправки формы */
+body.dark-theme form button {
+    background-color: #f9d71c; /* Ярко-желтый цвет для кнопки */
+    color: #222; /* Темный цвет для текста на кнопке */
+}
+body.dark-theme form button:hover {
+    background-color: #ffc107; /* Ярко-желтый цвет при наведении */
+}
+
+/* Стили для футера в темной теме */
+body.dark-theme footer {
+    background-color: #1c1c1c; /* Темный фон для футера */
+    color: #e4e4e4; /* Цвет текста */
+}
+body.dark-theme footer a {
+    color: #f9d71c; /* Ярко-желтый цвет для ссылок в футере */
+}
+body.dark-theme footer a:hover {
+    color: #ffc107; /* Ярко-желтый цвет при наведении на ссылки */
+}
+
+body.dark-theme #products-services{
+    background-color: #1c1c1c; /* Dark background for products and carousel */
+    color: #e4e4e4; /* Light text color */
+}
+
+body.dark-theme #products-services .card {
+    background-color: #333; /* Dark background for cards and carousel items */
+    color: #e4e4e4; /* Light text color */
+}
+
+body.dark-theme #products-services .card-title {
+    color: #f9d71c; /* Bright yellow color for titles and captions */
+}
+
+/* ...existing code... */
+
+body.dark-theme .carousel-dark-theme {
+    background-color: #1c1c1c; /* Dark background for carousel */
+    color: #e4e4e4; /* Light text color */
+}
+
+body.dark-theme .carousel-dark-theme .carousel-item {
+    background-color: #333; /* Dark background for carousel items */
+    color: #e4e4e4; /* Light text color */
+}
+
+body.dark-theme .carousel-dark-theme .carousel-caption {
+    color: #f9d71c; /* Bright yellow color for titles and captions */
+}
+
+/* ...existing code... */
+
+
+/* Стили для навигационной панели */
+.navbar {
+    background-color: #222; /* Темный фон для навигационной панели */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Размер шрифта для логотипа */
+    font-weight: bold; /* Жирное начертание шрифта */
+    color: #f9d71c; /* Ярко-желтый цвет для логотипа */
+}
+
+.navbar-brand:hover {
+    color: #ffc107; /* Ярко-желтый цвет при наведении на логотип */
+}
+
+.nav-link {
+    color: #f4f4f4; /* Светлый цвет текста для ссылок */
+}
+
+.nav-link:hover {
+    color: #f9d71c; /* Ярко-желтый цвет при наведении на ссылки */
+}
+
+/* Геройская секция (Hero section) */
+header {
+    background-image: url('img/southpark-background.jpg'); /* Фоновое изображение для хедера */
+    background-size: cover; /* Изображение растягивается, чтобы покрыть всю доступную область */
+    background-position: center; /* Центрируем фоновое изображение */
+    background-attachment: fixed; /* Фон будет фиксирован, прокручиваясь вместе с содержимым */
+    filter: brightness(0.8); /* Уменьшаем яркость фона, чтобы текст был более читаемым */
+    color: white; /* Белый цвет текста на фоне */
+    text-shadow: 2px 2px 5px #000; /* Тень для текста, чтобы сделать его более контрастным на фоне */
+    padding: 100px 0; /* Отступы сверху и снизу для увеличения вертикальной области */
+    min-height: 500px; /* Минимальная высота секции */
+    margin: 0 20px; /* Добавляем отступы по бокам, чтобы убрать элементы от краев */
+}
+
+/* Стили для заголовков и текста в хедере */
+header h1 {
+    font-size: 5rem; /* Очень крупный шрифт для заголовка */
+    font-weight: bold; /* Жирное начертание заголовка */
+}
+
+header p.lead {
+    font-size: 2rem; /* Размер шрифта для параграфа (второстепенный текст) */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+/* Mobile view: удаляем отступы на мобильных устройствах, чтобы изображение расширялось на весь экран */
+@media (max-width: 768px) {
+    header {
+      margin: 0; /* Убираем отступы на мобильных устройствах */
+    }
+}
+
+/* Видео секция */
+.video-section {
+    background-color: #f4f4f4; /* Светлый фон для видео-секции */
+    padding: 40px 0; /* Отступы сверху и снизу */
+}
+
+.video-section h2 {
+    color: #333; /* Цвет текста для заголовка видео-секции */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Стили для встраиваемого видео (iframe) */
+.video-section iframe {
+    width: 100vw; /* Ширина в 100% от ширины экрана (viewport) */
+    height: 700px; /* Высота видео, подходящая для большинства экранов */
+    border: none; /* Убираем стандартную рамку вокруг видео */
+    border: 5px solid #333; /* Добавляем темную рамку вокруг видео */
+    border-radius: 8px; /* Закругленные углы для рамки */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Легкая тень для видео */
+    margin-left: calc(-50vw + 50%); /* Центрируем iframe, если он выходит за пределы экрана */
+}
+
+/* Преимущества (section for benefits) */
+.benefits {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку, если не хватает места */
+    gap: 20px; /* Отступы между элементами */
+    justify-content: space-between; /* Распределяем элементы, чтобы они не прилипали к краям */
+    padding: 40px; /* Отступы внутри контейнера */
+    background-color: #f4f4f4; /* Светлый фон */
+    border-radius: 8px; /* Скругленные углы для контейнера */
+}
+
+/* Настройки для строк внутри секции преимуществ */
+.benefits .row {
+    display: flex; /* Используем flexbox внутри строки */
+    flex-wrap: wrap; /* Позволяем элементам переноситься, если не помещаются */
+    gap: 30px; /* Отступы между элементами внутри строки */
+}
+
+/* Стили для каждого элемента в блоке преимуществ */
+.benefits .benefit-item {
+    background-color: #ffffff; /* Белый фон для каждого элемента */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Скругленные углы для элементов */
+    text-align: center; /* Выравнивание текста по центру */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Легкая тень для выделения элементов */
+    transition: transform 0.3s ease; /* Плавный эффект для трансформации при наведении */
+    flex: 1 1 calc(33.33% - 20px); /* На больших экранах элементы занимают 1/3 ширины */
+}
+
+/* Эффект при наведении: увеличиваем элемент */
+.benefits .benefit-item:hover {
+    transform: scale(1.05); /* Увеличиваем элемент на 5% */
+}
+
+/* Стили для стрелок на мобильных устройствах */
+.benefits .arrow {
+    position: absolute; /* Абсолютное позиционирование стрелок */
+    top: 50%; /* Размещаем стрелку по центру вертикально */
+    transform: translateY(-50%); /* Центрируем стрелку по вертикали */
+    font-size: 30px; /* Размер стрелки */
+    color: #333; /* Цвет стрелки */
+    cursor: pointer; /* Курсор в виде руки */
+    z-index: 10; /* Обеспечиваем, чтобы стрелки были поверх других элементов */
+}
+
+.benefits .arrow-left {
+    left: 10px; /* Располагаем стрелку слева */
+}
+
+.benefits .arrow-right {
+    right: 10px; /* Располагаем стрелку справа */
+}
+
+/* Скрытие элементов и показ только одного на мобильных устройствах */
+@media (max-width: 768px) {
+    .benefits .row {
+        display: flex; /* Все равно используем flexbox для ряда */
+        overflow: hidden; /* Скрываем элементы, которые не помещаются */
+    }
+
+    .benefits .benefit-item {
+        display: none; /* Скрываем все элементы */
+        width: 100px; /* Задаем ширину для скрытых элементов */
+    }
+
+    .benefits .benefit-item.active {
+        display: block; /* Показываем только активный элемент */
+    }
+
+    .benefits {
+        position: relative; /* Устанавливаем относительно позиционирование для стрелок */
+        max-width: 100%; /* Максимальная ширина контейнера */
+    }
+}
+
+/* Секция отзывов */
+#testimonials {
+    background-color: #ffffff; /* Белый фон для секции отзывов */
+    padding: 20px 0; /* Отступы сверху и снизу */
+    text-align: center; /* Выравнивание текста по центру */
+    border-radius: 8px; /* Скругленные углы для секции */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Легкая тень для выделения секции */
+    width: 95%; /* Ширина секции с учетом отступов */
+    margin: 0 auto; /* Центрируем секцию на странице */
+}
+/* Слайдер */
+.slider {
+    position: relative; /* Позиционируем слайдер относительно */
+    width: 80%; /* Ширина слайдера */
+    margin: 0 auto; /* Центрируем слайдер */
+    overflow: hidden; /* Скрываем лишний контент за пределами слайдера */
+}
+
+.slides {
+    display: flex; /* Используем flexbox для слайдов */
+    transition: transform 0.5s ease-in-out; /* Плавное переключение слайдов */
+}
+
+.slide {
+    flex: 0 0 100%; /* Каждый слайд занимает 100% ширины контейнера */
+    text-align: center; /* Центрируем текст на слайде */
+    padding: 20px; /* Внутренние отступы */
+    box-sizing: border-box; /* Учитываем отступы в расчете ширины */
+}
+
+.slide p {
+    font-size: 1.5rem; /* Размер шрифта для текста на слайде */
+    color: #444; /* Темный цвет текста */
+}
+
+.slide h4 {
+    font-size: 1.2rem; /* Размер шрифта для заголовка на слайде */
+    color: #666; /* Цвет заголовка */
+}
+
+
+/* Стили для изображений на слайде */
+.slide img {
+    float: left; /* Размещаем изображение слева */
+    margin-right: 20px; /* Отступ справа от изображения */
+    margin-bottom: 20px; /* Отступ снизу от изображения */
+}
+
+/* Радиокнопки для управления слайдами (они скрыты) */
+input[type="radio"] {
+    display: none; /* Скрываем стандартные радиокнопки */
+}
+
+/* Управление переключением слайдов с помощью радиокнопок */
+#slide1:checked ~ .slides {
+    transform: translateX(0); /* Показываем первый слайд */
+}
+#slide2:checked ~ .slides {
+    transform: translateX(-100%); /* Переключаем на второй слайд */
+}
+#slide3:checked ~ .slides {
+    transform: translateX(-200%); /* Переключаем на третий слайд */
+}
+
+
+/* Метки для управления слайдером (кружочки) */
+.controls {
+    display: flex; /* Используем flexbox для расположения меток */
+    justify-content: center; /* Центрируем метки по горизонтали */
+    margin-top: 20px; /* Отступ сверху для разделения слайдера и меток */
+}
+
+.controls label {
+    width: 15px; /* Ширина метки */
+    height: 15px; /* Высота метки */
+    border-radius: 50%; /* Круглая форма метки */
+    background-color: #ccc; /* Цвет фона метки */
+    margin: 0 5px; /* Отступы между метками */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    transition: background-color 0.3s ease; /* Плавное изменение фона при наведении */
+}
+
+.controls label:hover {
+    background-color: #f9d71c; /* Цвет фона при наведении */
+}
+
+/* Когда радиокнопка активна (выбрана), изменяется цвет метки */
+input[type="radio"]:checked + label {
+    background-color: #222; /* Цвет фона выбранной метки */
+}
+
+/* ...existing code... */
+
+#characters {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку, если не хватает места */
+    gap: 20px; /* Отступы между элементами */
+    justify-content: space-between; /* Распределяем элементы, чтобы они не прилипали к краям */
+    padding: 40px; /* Отступы внутри контейнера */
+    background-color: #f4f4f4; /* Светлый фон */
+    border-radius: 8px; /* Скругленные углы для контейнера */
+}
+
+#characters .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+}
+
+/* ...existing code... */
+
+#characters .character-item {
+    background-color: #ffffff; /* Белый фон для каждого элемента */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Скругленные углы для элементов */
+    text-align: center; /* Выравнивание текста по центру */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Легкая тень для выделения элементов */
+    transition: transform 0.3s ease; /* Плавный эффект для трансформации при наведении */
+    flex: 1 1 calc(33.33% - 20px); /* На больших экранах элементы занимают 1/3 ширины */
+}
+
+#characters .character-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+#characters img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    #characters .row {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    #characters .character-item {
+        flex: 1 1 100%; /* Ensure items take up the full width */
+        margin-bottom: 20px; /* Add margin between items */
+    }
+}
+
+/* ...existing code... */
+
+/* Общие стили для секции продуктов */
+#products-services {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Контейнер для продуктов */
+#products-services .container-fluid {
+    padding: 0 15px;
+}
+
+/* Сетка для продуктов */
+#products-services .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* Карточки продуктов */
+#products-services .flip-container {
+    width: 100%; /* Карточка должна быть на всю ширину */
+    perspective: 1000px; /* Добавим перспективу для эффекта переворота */
+}
+
+#products-services .flip-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+#products-services .flip-container.flipped .flip-inner {
+    transform: rotateY(180deg); /* Переворот карточки */
+}
+ 
+#products-services .flip-back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#products-services .flip-front {
+    background: #fff;
+    /* Настройки фронтальной стороны */
+}
+
+#products-services .flip-back {
+    background: #fff;
+    transform: rotateY(180deg);
+    /* Настройки обратной стороны */
+}
+
+/* Стили для карточек */
+#products-services .card {
+    border: none;
+    border-radius: 8px;
+}
+
+#products-services .card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    #products-services .col-12 {
+        margin-bottom: 15px; /* Добавляем отступ снизу на мобильных устройствах */
+    }
+}
+
+/* Для десктопов (от 992px) */
+@media (min-width: 992px) {
+    #products-services .col-md-4 {
+        padding: 0 15px; /* Добавляем отступы между продуктами */
+    }
+}
+
+
+/* Стили для модального окна */
+.modal-content {
+    border-radius: 10px; /* Скругленные углы для модального окна */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Тень для модального окна */
+}
+
+/* Заголовок модального окна */
+.modal-header {
+    background-color: #222; /* Темный фон для заголовка */
+    color: #f4f4f4; /* Светлый цвет текста */
+}
+
+/* ...existing code... */
+
+/* Flip container base */
+.flip-container {
+    perspective: 1000px; /* Enables 3D flip */
+    cursor: pointer;
+  }
+  
+  /* Inner wrapper that flips */
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Flipped state */
+  .flip-container.flipped .flip-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Front & Back faces */
+  .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back when facing away */
+    top: 0;
+    left: 0;
+  }
+  
+  /* Flip the back face */
+  .flip-back {
+    transform: rotateY(180deg);
+  }
+  
+
+/* Общий стиль секции */
+#sign-in {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Контейнер формы */
+#sign-in .form-container {
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Поле ввода */
+#sign-in input.form-control {
+    width: 100%; /* Полная ширина в мобильной версии */
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Кнопка */
+#sign-in .btn-primary {
+    width: 100%; /* Полная ширина в мобильной версии */
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    white-space: nowrap;
+}
+
+/* Ховер и активный состояния для кнопки */
+#sign-in .btn-primary:hover {
+    background-color: #0056b3; /* Цвет при наведении */
+}
+
+#sign-in .btn-primary:active {
+    background-color: #003d80; /* Цвет при нажатии */
+    transform: scale(0.98); /* Легкое уменьшение размера */
+}
+
+/* Адаптивный дизайн для экранов от 768px и больше */
+@media (min-width: 768px) {
+    #sign-in .col-12 {
+        display: flex; /* Сохраняем элементы в ряд */
+        justify-content: space-between; /* Распределяем их по краям */
+        gap: 50px; /* Промежуток между элементами */
+    }
+    #sign-in input.form-control {
+        width: 70%; /* Поле занимает 70% ширины */
+    }
+    #sign-in .btn-primary {
+        width: 30%; /* Кнопка занимает 30% ширины */
+    }
+}
+
+/* Для экранов от 992px (например, на десктопах) можно сделать кнопку еще шире */
+@media (min-width: 992px) {
+    #sign-in .btn-primary {
+        width: 50%; /* Кнопка занимает 40% ширины на больших экранах */
+    }
+}
+
+
+
+
+/* Footer */
+footer {
+    background-color: #222; /* Темный фон для подвала */
+    color: #f4f4f4; /* Светлый цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 20px 0; /* Отступы сверху и снизу */
+}
+
+footer p {
+    margin: 0; /* Убираем отступы вокруг параграфа */
+}
+
+footer .social-links {
+    margin-top: 10px; /* Отступ сверху для ссылок социальных сетей */
+}
+
+footer .social-links a {
+    color: #f9d71c; /* Цвет ссылок */
+    margin: 0 10px; /* Отступы между ссылками */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 1.2rem; /* Размер шрифта для ссылок */
+}
+
+footer .social-links a:hover {
+    color: #ffc107; /* Цвет ссылки при наведении */
+}
+
+footer .container img {
+    margin: 0 5px; /* Уменьшаем отступ между иконками */
+  }
+
+
+/* Carousel section styles */
+#carousel-section {
+    margin-top: 40px;
+  }

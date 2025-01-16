@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Park Fan Page</title>
+    <!-- Подключение Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">South Park</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#characters">Characters</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sign in">Sign in</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Геройская секция -->
+    <header class="py-5 bg-dark text-light text-center">
+        <div class="container">
+            <h1>Welcome to South Park</h1>
+            <p class="lead">A fan page dedicated to the iconic show "South Park".</p>
+        </div>
+    </header>
+
+    <!-- Секция видео -->
+    <section class="video-section text-center py-4">
+        <div class="container">
+            <h2></h2>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qRJogSKK-3U?si=TBUihagYrqIys4Af" title="YouTube video player"  allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+<section class="benefits">
+    <div class="container-fluid">
+        <h2>Benefits</h2>
+        <div class="row">
+            <div class="benefit-item col-md-4 mb-3">
+                <h3>Hilarious Comedy</h3>
+                <p>Indulge in razor-sharp satire and farcical plotlines that dissect pop culture, politics, and everything in between. Each episode serves up ample laughs and unexpected twists that keep you coming back for more.</p>
+            </div>
+            <div class="benefit-item col-md-4 mb-3">
+                <h3>Iconic Characters</h3>
+                <p>Meet Stan, Kyle, Cartman, and Kenny—four friends whose outlandish adventures reflect real-world situations through a surreal lens. Their unique personalities and unforgettable antics form the heart of South Park’s enduring charm.</p>
+            </div>
+            <div class="benefit-item col-md-4 mb-3">
+                <h3>Social Commentary</h3>
+                <p>Experience biting observations on contemporary issues delivered with playful irreverence. South Park balances humor and honest reflection, sparking conversation while never sacrificing its outrageous sense of fun.</p>
+            </div>
+        </div>
+        <span class="arrow arrow-left" onclick="changeBenefit('prev')">&#8592;</span>
+        <span class="arrow arrow-right" onclick="changeBenefit('next')">&#8594;</span>
+    </div>
+</section>
+
+<!-- ...existing code above... -->
+<section id="testimonials">
+    <div class="container-fluid">
+        <h2>Отзывы</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="slider">
+                    <!-- Радиокнопки для переключения -->
+                    <input type="radio" name="slide" id="slide1" checked>
+                    <input type="radio" name="slide" id="slide2">
+                    <input type="radio" name="slide" id="slide3">
+                    
+                    <!-- Слайды -->
+                    <div class="slides">
+                        <div class="slide" id="s1">
+                            <img src="img/ava1.jpg" alt="Avatar 1" class="img-fluid rounded-circle mb-3" style="width: 200px; height: 200px;">
+                            <p>"Юмор и сюжеты South Park заставляют меня возвращаться снова и снова! Ценю нестандартный подход в каждой серии."</p>
+                            <h4>- Алексей</h4>
+                        </div>
+                        <div class="slide" id="s2">
+                            <img src="img/ava2.jpg" alt="Avatar 2" class="img-fluid rounded-circle mb-3" style="width: 200px; height: 200px;">
+                            <p>"Каждая серия — яркая смесь юмора и обличающей сатиры. Прекрасно подходит для отдыха после тяжелого дня."</p>
+                            <h4>- Марина</h4>
+                        </div>
+                        <div class="slide" id="s3">
+                            <img src="img/ava3.jpg" alt="Avatar 3" class="img-fluid rounded-circle mb-3" style="width: 200px; height: 200px;">
+                            <p>"Мне нравится, как в South Park поднимают важные темы, оставаясь при этом максимально забавными."</p>
+                            <h4>- Иван</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- Метки для переключения -->
+                <div class="controls">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ...existing code below... -->
+    
+    
+
+    <!-- Персонажи -->
+<!-- ...existing code above... -->
+<section id="characters" class="py-5">
+    <div class="container-fluid">
+        <h2 class="text-center">Персонажи</h2>
+        <div class="row">
+            <div class="character-item col-md-3 mb-4">
+                <img src="img/stan.jpg" alt="Stan" class="img-fluid rounded-circle">
+                <h3>Stan Marsh</h3>
+                <p>Stan is the everyman of the group, often serving as the voice of reason amidst the chaos. His grounded perspective and moral compass make him a relatable and endearing character.</p>
+            </div>
+            <div class="character-item col-md-3 mb-4">
+                <img src="img/kyle.jpg" alt="Kyle" class="img-fluid rounded-circle">
+                <h3>Kyle Broflovski</h3>
+                <p>Kyle is known for his intelligence and strong sense of justice. As the only Jewish kid in town, he often faces unique challenges, but his loyalty to his friends never wavers.</p>
+            </div>
+            <div class="character-item col-md-3 mb-4">
+                <img src="img/cartman.jpg" alt="Cartman" class="img-fluid rounded-circle">
+                <h3>Eric Cartman</h3>
+                <p>Cartman is the group's antagonist, known for his selfishness, bigotry, and manipulative nature. Despite his many flaws, his outrageous schemes and larger-than-life personality make him a fan favorite.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ...existing code below... -->
+
+<!-- ...existing code... -->
+<section id="products-services" class="py-5">
+    <div class="container-fluid">
+        <h2 class="text-center mb-4">Our Products / Services</h2>
+        <div class="row g-3">
+            <!-- Product One -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="flip-container" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-inner">
+                        <!-- Front Face -->
+                        <div class="flip-front card spinner-card">
+                            <img src="img/product1.jpg" class="card-img-top" alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Product One</h5>
+                                <p class="card-text">
+                                    This is a brief description of Product One. It has great features and benefits.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Back Face -->
+                        <div class="flip-back card spinner-card">
+                            <img src="img/product1-detail.jpg" class="card-img-top" alt="Product 1 Detail">
+                            <div class="card-body">
+                                <h5 class="card-title">More About Product One</h5>
+                                <p class="card-text">
+                                    Detailed info, specs, or anything else you want to showcase about Product One.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Two -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="flip-container" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-inner">
+                        <div class="flip-front card spinner-card">
+                            <img src="img/product2.jpg" class="card-img-top" alt="Product 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Two</h5>
+                                <p class="card-text">
+                                    This is a brief description of Product Two. It offers excellent value.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flip-back card spinner-card">
+                            <img src="img/product2-detail.jpg" class="card-img-top" alt="Product 2 Detail">
+                            <div class="card-body">
+                                <h5 class="card-title">More About Product Two</h5>
+                                <p class="card-text">
+                                    Detailed info, specs, or anything else you want to showcase about Product Two.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Three -->
+            <div class="col-12 col-md-4 mb-4">
+                <div class="flip-container" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-inner">
+                        <div class="flip-front card spinner-card">
+                            <img src="img/product3.jpg" class="card-img-top" alt="Product 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Product Three</h5>
+                                <p class="card-text">
+                                    This is a short description of Product Three. It’s simple yet powerful.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flip-back card spinner-card">
+                            <img src="img/product3-detail.jpg" class="card-img-top" alt="Product 3 Detail">
+                            <div class="card-body">
+                                <h5 class="card-title">More About Product Three</h5>
+                                <p class="card-text">
+                                    Detailed info, specs, or anything else you want to showcase about Product Three.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <!-- ...existing code... -->
+<!-- ...existing code... -->
+<section id="carousel-section" class="py-5 carousel-dark-theme">
+    <div class="container">
+      <h2 class="text-center mb-4">Photo Carousel</h2>
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/carousel1.jpg" class="d-block w-100" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="img/carousel2.jpg" class="d-block w-100" alt="Slide 2">
+          </div>
+          <div class="carousel-item">
+            <img src="img/carousel3.jpg" class="d-block w-100" alt="Slide 3">
+          </div>
+          <div class="carousel-item">
+            <img src="img/carousel4.jpg" class="d-block w-100" alt="Slide 4">
+          </div>
+          <div class="carousel-item">
+            <img src="img/carousel5.jpg" class="d-block w-100" alt="Slide 5">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="sign-in" class="py-5">
+    <div class="form-container text-center">
+        <h2>Join the Fan Community</h2>
+        <form class="mt-4">
+            <div class="row align-items-center">
+                <div class="col-12 d-flex justify-content-between flex-md-row flex-column px-3">
+                    <input 
+                        type="email" 
+                        class="form-control mb-3 mb-md-0" 
+                        placeholder="Enter your email">
+                    <button 
+                        type="button" 
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#signUpModal">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Модальное окно -->
+<div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <p class="mb-0">&copy; 2025 South Park Fan Page. All rights reserved.</p>
+            <div class="social-links">
+                <img src="img/youTube.jpg" alt="YouTube" class="img-fluid" style="width: 40px; height: 40px;">
+                <img src="img/x.jpg" alt="Facebook" class="img-fluid" style="width: 40px; height: 40px;">
+                <img src="img/telegram.jpg" alt="Twitter" class="img-fluid" style="width: 40px; height: 40px;">
+                <img src="img/inst.jpg" alt="Instagram" class="img-fluid" style="width: 40px; height: 40px;">
+            </div>
+        </div>
+    </footer>
+
+    <button class="btn btn-secondary btn-toggle-theme">Toggle Theme</button>
+    
+    <!-- Подключение Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Логика переключения темы
+        const toggleThemeButton = document.querySelector('.btn-toggle-theme');
+
+        toggleThemeButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            document.querySelector('nav').classList.toggle('dark-theme');
+            document.querySelector('footer').classList.toggle('dark-theme');
+        });
+    </script>
+    
+    <script>
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.benefit-item');
+        
+        function changeBenefit(direction) {
+            items[currentIndex].classList.remove('active'); // Скрываем текущий активный элемент
+            if (direction === 'next') {
+                currentIndex = (currentIndex + 1) % items.length; // Переход к следующему элементу
+            } else if (direction === 'prev') {
+                currentIndex = (currentIndex - 1 + items.length) % items.length; // Переход к предыдущему элементу
+            }
+            items[currentIndex].classList.add('active'); // Показываем новый активный элемент
+        }
+        
+        // Инициализируем показ первого элемента при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            items[currentIndex].classList.add('active');
+        });
+        
+    </script>
+</body>
+</html>
