@@ -25,13 +25,16 @@
                         <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#characters">Characters</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#sign in">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="company.html">Company</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="basket.html">Basket</a>
                     </li>
                 </ul>
             </div>
@@ -344,15 +347,41 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     <script>
-        // Логика переключения темы
-        const toggleThemeButton = document.querySelector('.btn-toggle-theme');
-
-        toggleThemeButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme');
-            document.querySelector('nav').classList.toggle('dark-theme');
-            document.querySelector('footer').classList.toggle('dark-theme');
-        });
+        // Ключ для хранения темы
+        const THEME_KEY = 'theme';
+    
+        // Функция для применения темы
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+                document.querySelector('nav').classList.add('dark-theme');
+            } else {
+                document.body.classList.remove('dark-theme');
+                document.querySelector('nav').classList.remove('dark-theme');
+            }
+        }
+    
+        // Загрузка темы из localStorage
+        function loadTheme() {
+            const savedTheme = localStorage.getItem(THEME_KEY) || 'light'; // По умолчанию 'light'
+            applyTheme(savedTheme);
+        }
+    
+        // Смена темы
+        function toggleTheme() {
+            const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem(THEME_KEY, newTheme); // Сохраняем новую тему
+            applyTheme(newTheme);
+        }
+    
+        // Установка обработчика на кнопку
+        document.querySelector('.btn-toggle-theme').addEventListener('click', toggleTheme);
+    
+        // Применение темы при загрузке страницы
+        document.addEventListener('DOMContentLoaded', loadTheme);
     </script>
+    
     
     <script>
         let currentIndex = 0;

@@ -9,6 +9,27 @@ body {
     padding: 0; /* Убираем внутренние отступы */
 }
 
+/* Убираем отступы и делаем тело страницы растягивающимся */
+html, body {
+    height: 100%; /* Высота на всю страницу */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Чтобы контент располагался сверху вниз */
+}
+
+/* Основной контейнер, который будет растягиваться */
+.container {
+    flex: 1; /* Это позволяет контейнеру занимать все доступное пространство */
+}
+
+/* Стили для футера */
+footer {
+    background-color: #343a40; /* Цвет фона футера */
+    color: white;
+    padding: 20px 0;
+}
+
+
 h1, h2, h3, h4 {
     font-family: 'Trebuchet MS', sans-serif; /* Шрифт для заголовков */
 }
@@ -171,6 +192,50 @@ body.dark-theme .carousel-dark-theme .carousel-item {
 body.dark-theme .carousel-dark-theme .carousel-caption {
     color: #f9d71c; /* Bright yellow color for titles and captions */
 }
+
+body.dark-theme {
+    background-color: #121212; /* Dark background color */
+    color: #f4f4f4; /* Light text color */
+}
+
+body.dark-theme .navbar, .dark-theme .footer {
+    background-color: #212529; /* Darker background for navbar and footer */
+    color: #f4f4f4; /* Light text color */
+}
+
+body.dark-theme table {
+    background-color: #212529; /* Dark background for table */
+    color: #f4f4f4; /* Light text color */
+}
+
+body.dark-theme th, .dark-theme td {
+    border-color: #343a40; /* Dark border color */
+}
+
+body.dark-theme .btn-toggle-theme {
+    background-color: #343a40; /* Dark background for button */
+    color: #f4f4f4; /* Light text color */
+    border: none; /* Remove border */
+}
+
+body.dark-theme .btn-toggle-theme:hover {
+    background-color: #495057; /* Slightly lighter background on hover */
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-theme .btn {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-theme .navbar-dark .navbar-nav .nav-link {
+    color: #bbbbbb;
+}
+
 
 /* ...existing code... */
 
@@ -715,3 +780,77 @@ footer .container img {
 #carousel-section {
     margin-top: 40px;
   }
+
+/* Main Photo Section */
+.hero-section {
+    background-image: url('img/south_park_studio.jpg'); /* Background image for the section */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Fix the background image */
+    filter: brightness(0.8); /* Reduce brightness for better text readability */
+    color: white; /* White text color */
+    text-shadow: 2px 2px 5px #000; /* Text shadow for better contrast */
+    padding: 100px 0; /* Vertical padding */
+    min-height: 500px; /* Minimum height for the section */
+    margin: 0 20px; /* Side margins */
+}
+
+.hero-section h2 {
+    font-size: 5rem; /* Large font size for the section title */
+    font-weight: bold; /* Bold font weight */
+}
+
+.hero-section p {
+    font-size: 2rem; /* Font size for the paragraph */
+    margin-top: 10px; /* Top margin */
+}
+
+/* Mobile view: remove margins on mobile devices */
+@media (max-width: 768px) {
+    .hero-section {
+        margin: 0; /* Remove side margins */
+    }
+}
+
+/* Video Section */
+.video-section {
+    background-color: #343a40; /* Dark background color */
+    color: white; /* White text color */
+    padding: 50px 0; /* Vertical padding */
+}
+
+.video-section h2 {
+    font-size: 3rem; /* Large font size for the section title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.video-section video {
+    max-width: 100%; /* Ensure the video is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the video */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the video */
+}
+
+/* Footer */
+footer {
+    background-color: #212529; /* Dark background color */
+    color: white; /* White text color */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Centered text */
+}
+
+table {
+    border: 1px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    vertical-align: middle;
+}
+
+.remove-item {
+    font-size: 0.8rem;
+}
+
+

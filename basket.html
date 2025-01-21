@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">South Park</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#characters">Characters</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sign in">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="company.html">Company</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="basket.html">Basket</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Корзина -->
+    <div class="container py-5">
+        <h1 class="text-center">Your Basket</h1>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>South Park DVD Box Set</td>
+                    <td>$49.99</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary decrement">-</button>
+                        <input type="number" class="form-control d-inline text-center quantity" value="1" min="1" style="width: 60px;">
+                        <button class="btn btn-sm btn-primary increment">+</button>
+                    </td>
+                    <td class="total">$49.99</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm remove-item">Remove</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>South Park Poster</td>
+                    <td>$9.99</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary decrement">-</button>
+                        <input type="number" class="form-control d-inline text-center quantity" value="3" min="1" style="width: 60px;">
+                        <button class="btn btn-sm btn-primary increment">+</button>
+                    </td>
+                    <td class="total">$29.97</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm remove-item">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="3" class="text-end">Total Cost:</th>
+                    <th>$79.96</th>
+                    <th></th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="text-center mt-4">
+        <button class="btn btn-success">Proceed to Checkout</button>
+    </div>
+
+    <footer class="bg-dark text-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <p class="mb-0">&copy; 2025 South Park Fan Page. All rights reserved.</p>
+            <div class="social-links">
+                <img src="img/youTube.jpg" alt="YouTube" class="img-fluid" style="width: 40px; height: 40px;">
+                <img src="img/x.jpg" alt="Facebook" class="img-fluid" style="width: 40px; height: 40px;">
+                <img src="img/telegram.jpg" alt="Twitter" class="img-fluid" style="width: 40px; height: 40px;">
+                <img src="img/inst.jpg" alt="Instagram" class="img-fluid" style="width: 40px; height: 40px;">
+            </div>
+        </div>
+    </footer>
+
+    <button class="btn btn-secondary btn-toggle-theme">Toggle Theme</button>
+
+    <!-- Подключение Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Ключ для хранения темы
+        const THEME_KEY = 'theme';
+    
+        // Функция для применения темы
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+                document.querySelector('nav').classList.add('dark-theme');
+            } else {
+                document.body.classList.remove('dark-theme');
+                document.querySelector('nav').classList.remove('dark-theme');
+            }
+        }
+    
+        // Загрузка темы из localStorage
+        function loadTheme() {
+            const savedTheme = localStorage.getItem(THEME_KEY) || 'light'; // По умолчанию 'light'
+            applyTheme(savedTheme);
+        }
+    
+        // Смена темы
+        function toggleTheme() {
+            const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem(THEME_KEY, newTheme); // Сохраняем новую тему
+            applyTheme(newTheme);
+        }
+    
+        // Установка обработчика на кнопку
+        document.querySelector('.btn-toggle-theme').addEventListener('click', toggleTheme);
+    
+        // Применение темы при загрузке страницы
+        document.addEventListener('DOMContentLoaded', loadTheme);
+    </script>    
+    <script>
+
+        // Обновление итогов
+        function updateTotals() {
+            let totalCost = 0;
+            const rows = document.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                const price = parseFloat(row.children[1].textContent.replace('$', ''));
+                const quantity = parseInt(row.querySelector('.quantity').value);
+                const total = price * quantity;
+                row.querySelector('.total').textContent = `$${total.toFixed(2)}`;
+                totalCost += total;
+            });
+            document.querySelector('tfoot th:last-child').textContent = `$${totalCost.toFixed(2)}`;
+        }
+
+        // Удаление товара
+        document.addEventListener('click', e => {
+            if (e.target.classList.contains('remove-item')) {
+                e.target.closest('tr').remove();
+                updateTotals();
+            }
+        });
+
+        // Увеличение/уменьшение количества
+        document.addEventListener('click', e => {
+            if (e.target.classList.contains('increment') || e.target.classList.contains('decrement')) {
+                const quantityInput = e.target.closest('td').querySelector('.quantity');
+                if (e.target.classList.contains('increment')) {
+                    quantityInput.value = parseInt(quantityInput.value) + 1;
+                } else if (quantityInput.value > 1) {
+                    quantityInput.value = parseInt(quantityInput.value) - 1;
+                }
+                updateTotals();
+            }
+        });
+
+        // Инициализация
+        document.addEventListener('DOMContentLoaded', loadBasket);
+        document.addEventListener('input', saveBasket);
+    </script>
+</body>
+</html>
